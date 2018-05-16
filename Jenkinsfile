@@ -9,14 +9,13 @@ pipeline {
     }
     stage('Dependencies') {
       steps {
-        sh 'composer install'
+        sh 'composer update'
       }
     }
     stage('Artifacts') {
       steps {
-        sh 'tar -czf dist.tar.gz ./dist'
-        stash 'dist.tar.gz'
+        sh 'touch 1.txt
       }
     }
-}
+  }
 }
