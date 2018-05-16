@@ -15,6 +15,7 @@ pipeline {
     }
     stage('Artifacts') {
       steps {
+        sh 'jar -cvf pipeline.war ./*'
         sh 'scp -r ./* root@106.14.159.47:/home/pipeline/'
       }
     }
