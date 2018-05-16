@@ -9,7 +9,6 @@ pipeline {
     }
     stage('Dependencies') {
       steps {
-        sh 'npm install'
         sh 'composer install'
       }
     }
