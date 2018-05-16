@@ -10,7 +10,6 @@ pipeline {
     stage('Dependencies') {
       steps {
         sh 'composer install'
-        sh 'php artisan key:generate'
       }
     }
     stage('Artifacts') {
