@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'node -v'
         sh 'npm -v'
+        sh 'composer -v'
       }
     }
     stage('Dependencies') {
@@ -14,7 +15,7 @@ pipeline {
     }
     stage('Artifacts') {
       steps {
-        sh 'touch 1.txt
+        sh 'touch 1.txt'
       }
     }
   }
