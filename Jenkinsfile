@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Artifacts') {
       steps {
-        sh 'touch 1.txt'
+        sh 'scp -r ./* root@106.14.159.47:/home/pipeline/'
       }
     }
   }
