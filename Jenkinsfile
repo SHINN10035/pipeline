@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Information') {
       steps {
-        sh 'node -v'
-        sh 'npm -v'
+        sh 'php -v'
         sh 'composer -v'
       }
     }
     stage('Dependencies') {
       steps {
         sh 'composer install'
+        sh 'php artisan key:generate'
       }
     }
     stage('Artifacts') {
